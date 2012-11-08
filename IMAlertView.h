@@ -7,10 +7,12 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^SKAlertViewSimpleBlock)(void);
-typedef void(^SKAlertViewButtonIndexBlock)(NSInteger buttonIndex);
+typedef void(^IMAlertViewSimpleBlock)(void);
+typedef void(^IMAlertViewButtonIndexBlock)(NSInteger buttonIndex);
 
 @interface IMAlertView : UIAlertView <UIAlertViewDelegate>
+
++ (IMAlertView *)alertViewWithTitle:(NSString *)title message:(NSString *)message;
 
 - (IMAlertView *)initWithTitle:(NSString *)title message:(NSString *)message;
 

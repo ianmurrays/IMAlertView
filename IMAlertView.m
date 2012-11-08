@@ -18,6 +18,11 @@
 
 @implementation IMAlertView
 
++ (IMAlertView *)alertViewWithTitle:(NSString *)title message:(NSString *)message
+{
+    return [[IMAlertView alloc] initWithTitle:title message:message];
+}
+
 - (IMAlertView *)initWithTitle:(NSString *)title message:(NSString *)message
 {
     self = [super initWithTitle:title message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
